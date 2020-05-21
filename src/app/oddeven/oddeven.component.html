@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <button type="button" class="btn btn-success" (click)="result = !result">showeven</button>
+    </div>
+  </div>
+  <br>
+  <ul class="list-group">
+    <div *ngIf="result">
+      <li class="list-group-item"  [ngClass]="{e:e % 2 !==0}" *ngFor="let e of even">{{ e }}</li>
+    </div>
+    <div *ngIf="!result">
+      <li class="list-group-item"  [ngClass]="{o:o % 2 ===0}" *ngFor="let o of odd">{{ o }}</li>
+    </div>
+  </ul>
+
+</div>
